@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign In</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="Css/style.css">
+    <link rel="icon" href="./photos/titlelogo.png">
+</head>
+
+<body>
+    <header>
+        <h1>PowerZone <i class="fa-solid fa-dumbbell"></i></h1>
+        <nav>
+            <ul>
+                <li><a href="homepage.html">Homepage</a></li>
+                <li class="dropdown">
+                    <a href="#our-service">Our Service</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="bmi-calculator.html">BMI Calculator</a></li>
+                        <li><a href="calories-calculator.html">Calories Calculator</a></li>
+                        <li><a href="workout-library.html">Workout Library</a></li>
+                        <li><a href="challenge.html">Challenge Yourself</a></li>
+                    </ul>
+                </li>
+                <li><a href="sign-in.html">Sign In</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="sign-in">
+        <div class="sign-in-container">
+            <h2>Sign In <br><i class="fa-solid fa-right-to-bracket"></i></h2>
+            <form action="dashboard.html" method="POST">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" placeholder="Enter your username" required minlength="8"
+                    maxlength="30">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="8"
+                    maxlength="16">
+                <input type="submit" value="Sign In">
+            </form>
+            <a href="javascript:void(0);" id="sign-up-link" class="back-link">Don't have an account? Sign up here</a>
+        </div>
+    </div>
+
+    <!-- Sign Up Modal --> 
+<div id="sign-up-modal" class="modal">
+    <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h2>Sign Up</h2>
+        
+        <!-- Motivational Phrase -->
+        <p class="motivation-phrase">"Ready to transform? Your new journey begins with a single click."</p>
+        
+        <form action="dashboard.html" method="POST">
+            <label for="new-username">Username</label>
+            <input type="text" id="new-username" name="new-username" placeholder="Enter your username" required minlength="8" maxlength="30">
+
+            <label for="new-email">Email</label>
+            <input type="email" id="new-email" name="new-email" placeholder="Enter your email" required minlength="8" maxlength="30">
+
+            <label for="new-password">Password</label>
+            <input type="password" id="new-password" name="new-password" placeholder="Enter your password" required minlength="8" maxlength="16">
+
+            <label for="confirm-password">Confirm Password</label>
+            <input type="password" id="confirm-password" name="confirm-password" placeholder="Confirm your password" required minlength="8" maxlength="16">
+            
+            <input type="submit" value="Sign Up">
+        </form>
+    </div>
+</div>
+
+
+    <script src="Js/sign.js"></script>
+    <footer>
+        <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: <a href="PowerZone@example.com">PowerZone@example.com</a></p>
+            <p>Phone: <a href="tel:+1234567890">+1 234 567 890</a></p>
+        </div>
+    </footer>
+</body>
+
+</html>

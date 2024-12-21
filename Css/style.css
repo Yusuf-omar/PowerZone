@@ -1,0 +1,730 @@
+/* body style */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins',Poppins;
+    background-image: url(..//photos/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+    color: white;
+
+}
+
+/* Header Styles */
+header {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+header h1 {
+    margin: 0;
+    font-size: 25px;
+
+}
+
+/* nav style */
+nav ul {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+
+}
+
+nav ul li {
+    margin: 0 15px;
+
+}
+
+nav ul li a,
+nav ul .dropdown-menu li a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav ul li a {
+    color: white;
+    font-size: 16px;
+}
+
+nav ul .dropdown-menu li a {
+    color: #333030;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+
+}
+
+/* Style for the dropdown container */
+nav ul li {
+    position: relative;
+
+}
+
+nav ul .dropdown-menu {
+    display: none;
+    position: absolute;
+    background-color: #ffffff;
+    padding: 10px 0;
+    margin: 0;
+    z-index: 1000;
+
+}
+
+nav ul .dropdown-menu li {
+    padding: 1px 15px;
+
+}
+
+nav ul .dropdown-menu li a:hover {
+    color: #00bcd4;
+
+}
+
+nav ul li.dropdown:hover .dropdown-menu {
+    display: block;
+
+}
+
+/* main homepage content (phrase+logo) */
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+
+/* Main logo*/
+.logo img {
+    width: 350px;
+    height: auto;
+    margin-bottom: 30px;
+    transition: all 0.3s ease;
+
+}
+.logo img:hover {
+    filter: brightness(1.7) sepia(0) saturate(100%) hue-rotate(0deg); /* Lighten the logo */
+}
+
+
+/* Motivation Phrase */
+.motivation-phrase p {
+    font-size: 28px;
+    max-width: 800px;
+    margin: 0 auto;
+    color: #e0e0e0;
+    line-height: 1.6;
+    transition: all 0.3s ease;
+}
+.motivation-phrase p:hover{
+    color: #82d1db;
+ /* Lighten the logo */
+}
+/* BMI Calculator Container */
+.bmi-container {
+    max-width: 800px; /* Match Calories Calculator width */
+    margin: 20px auto; /* Center-align with similar spacing */
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center; /* Center the text */
+}
+
+/* Input Section */
+.bmi-container .inputs {
+    margin: 10px 0;
+}
+
+.bmi-container .inputs label {
+    display: block;
+    margin-bottom: 5px; /* Match Calories Calculator label spacing */
+    font-weight: bold;
+}
+
+.bmi-container .inputs input,
+.bmi-container .inputs select {
+    width: calc(100% - 20px); /* Consistent input width */
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem; /* Consistent font size */
+    transition: border-color 0.3s;
+}
+
+.bmi-container .inputs input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+    -webkit-appearance: textfield; /* Safari and Chrome */
+    appearance: textfield;
+}
+
+.bmi-container .inputs input[type="number"]::-webkit-outer-spin-button,
+.bmi-container .inputs input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Calculate Button */
+#calculate-bmi {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+#calculate-bmi:hover {
+    background-color: #3f8f43;
+}
+
+/* Output Section */
+.output {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem; /* Match Calories Calculator output size */
+}
+
+#bmi-value {
+    font-size: 1.2rem; /* Match the Calories Calculator font size */
+    font-weight: bold;
+    padding: 10px;
+    margin: 10px auto;
+}
+
+#bmi-category {
+    margin-top: 10px;
+    font-size: 1.2rem; /* Match Calories Calculator output size */
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 5px;
+    width: calc(100% - 20px); /* Full width to match the layout */
+}
+
+/* Underweight */
+#bmi-category.underweight {
+    background-color: #ff6347;
+    color: white;
+}
+
+/* Normal */
+#bmi-category.normal {
+    background-color: #28a745;
+    color: white;
+}
+
+/* Overweight */
+#bmi-category.overweight {
+    background-color: #ffc107;
+    color: black;
+}
+
+/* Obesity */
+#bmi-category.obesity {
+    background-color: #dc3545;
+    color: white;
+}
+
+/*Calories Calc */
+.calories-calculator {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+    border-radius: 10px;
+    text-align: center; /* Center the text */
+}
+/* Input Fields */
+.inputs {
+    margin: 10px 0;
+}
+
+.inputs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inputs input,
+.inputs select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.inputs select {
+    cursor: pointer;
+}
+
+/* Calculate Button */
+#calculate-calories {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    color: white;
+}
+
+#calculate-calories:hover {
+    background-color: #3f8f43;
+}
+/* Output Section */
+.output {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+#calories-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#macronutrients-breakdown {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+
+
+
+/* Challenge Container */
+.challenge-container {
+    max-width: 6000px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Calendar Grid */
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    gap: 10px;
+}
+
+/* Individual Day */
+.day {
+    padding: 15px;
+    margin: 5px;
+    background-color: #f0efef;
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s;
+}
+
+.day:hover {
+    background-color: #d0d0d0
+}
+
+.day.completed {
+    background-color: #d4edda;
+    /* Light green for completed days */
+    color: #155724;
+    font-weight: bold;
+}
+
+/* Reset Button */
+#reset-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #ff4d4d;
+    ;
+    color: white;
+    border: none;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#reset-button:hover {
+    background-color: #cc0000;
+}
+
+/* General Container */
+.calories-calculator {
+    max-width: 800px;
+    margin: 20px auto;
+    text-align: center;
+}
+
+/* Input Fields */
+.inputs {
+    margin: 10px 0;
+}
+
+.inputs label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.inputs input,
+.inputs select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 5px auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.inputs select {
+    cursor: pointer;
+}
+
+/* Calculate Button */
+#calculate-calories {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+#calculate-calories:hover {
+    background-color: #45a049;
+}
+
+/* Output Section */
+.output {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
+
+#calories-value {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+#macronutrients-breakdown {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+
+/* Workout Library Styles */
+.workout-library {
+    padding: 10px;
+    text-align: center;
+}
+
+.workout-library h1 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.workout-plans {
+    display: flex;
+    justify-content:space-evenly;
+    flex-wrap: wrap;
+    gap: 80px;
+    margin: 18x;
+}
+
+.workout-box {
+    flex: 1;
+    max-width: 320px;
+    padding: 20px;
+    border: 1.5px solid #4b8cd1;
+    border-radius: 9px;
+    background-size: cover;
+    background-image: url();
+    background-position:center;
+    box-shadow: 0 15px 6px rgba(201, 198, 198, 0.1);
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.5s, box-shadow 0.5s, background-color 0.5s;
+}
+
+.workout-box[data-plan="bro-split"] {
+    background-image: url('/photos/cbum1.png') 
+}
+.workout-box[data-plan="arnold-split"] {
+    background-image: url('/photos/cbum2.png'); 
+}
+.workout-box[data-plan="ppl"] {
+    background-image: url('/photos/cbum5.png'); 
+}
+.workout-box[data-plan="upper-lower"] {
+    background-image: url('/photos/cbum4.png'); 
+}
+
+.workout-box:hover {
+    transform: translateY(-30px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+#workout-content {
+    margin: 25px auto;
+    padding: 15px;
+    background-color:rgb(31, 31, 31);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 320px;
+    background-size: cover;
+    background-position: center;
+    border: 1px solid rgb(255, 255, 255);
+}
+
+.hidden {
+    display: none;
+}
+
+#back-button {
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #248cfc;
+    color: rgb(0, 0, 0);
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+#back-button:hover {
+    background-color: #0056b3;
+}
+
+#workout-details h2 {
+    color: #fff1f1;
+    margin-bottom: 20px;
+    font-family: Poppins;
+}
+
+#workout-details ul {
+    list-style: disc;
+    text-align: left;
+    margin: 0 auto;
+    padding: 0 20px;
+    color: #959494;
+}
+
+/* Sign in page */
+.sign-in {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.sign-in-container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+.sign-in-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+    color: #333;
+}
+
+.sign-in-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.sign-in-container label {
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.sign-in-container input[type="text"],
+.sign-in-container input[type="password"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.sign-in-container input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.sign-in-container input[type="submit"]:hover {
+    background-color: #575757;
+}
+
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+/* Modal Styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0, 0, 0); /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4); /* Black with opacity */
+    padding-top: 60px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    position: relative;
+}
+/* Motivational phrase in sign-up modal */
+.motivation-phrase {
+    font-size: 16px;
+    color: #555;
+    font-style: italic;
+    margin-bottom: 20px; /* Space between phrase and form */
+    text-align: center;
+    padding: 10px;
+}
+
+/* Close Button */
+.close {
+    color: #aaa;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Sign-up form inside modal */
+.modal-content form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Make sure inputs in the modal are consistent with the sign-in form */
+.modal-content input[type="text"],
+.modal-content input[type="password"],
+.modal-content input[type="email"] {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.modal-content input[type="submit"] {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.modal-content input[type="submit"]:hover {
+    background-color: #575757;
+}
+
+/* Hover effect for "Don't have an account?" link */
+.back-link {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #333;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Footer Styles */
+footer {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    text-align: center;
+    width: 100%; /* Full width */
+    margin-top: 20px; /* Adds spacing between footer and content */
+    box-sizing: border-box;
+}
+footer .footer-section h3 {
+    margin-bottom: 10px;
+}
+
+footer .footer-section a {
+    color: #00bcd4;
+    /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer .footer-section a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+}
